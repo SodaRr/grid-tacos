@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="content/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="content/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="content/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Tacos</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="top">
+            <header class="hero">
+                <h1>Terry's Taco Joint</h1>
+                <p>Pretty Good Tacos!</p>
+            </header>
+            <div class="cta cta1">
+                <p class="price">$1.99</p>
+                <p>Tacos</p>
+            </div>
+            <div class="cta cta2">
+                <p class="price">$3.99</p>
+                <p>Kombucha</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <button aria-expanded="false" aria-controls="menu-list">
+                <span class="open">&equiv;</span>
+                <span class="close">&times;</span>
+                Menu
+            </button>
+            <ul id="menu-list">
+                <li>
+                    <a href="#">Tacos</a>
+                </li>
+                <li>
+                    <a href="#">Beers</a>
+                </li>
+                <li>
+                    <a href="#">Wines</a>
+                </li>
+                <li>
+                    <a href="#">Desserts</a>
+                </li>
+                <li>
+                    <a href="#">Reservations</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="features">
+            <div class="feature">
+                <span class="icon">
+                    <img src="content/taco.png" alt="">
+                </span>
+                <h3>Tacos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">
+                    <img src="content/beer.png" alt="">
+                </span>
+                <h3>Beer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">
+                    <img src="content/wine.png" alt="">
+                </span>
+                <h3>Wine</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">
+                    <img src="content/music.png" alt="">
+                </span>
+                <h3>Music</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <img src="content/2.jpg" alt="Yummy Taco" class="about__mockup">
+            <div class="about__details">
+                <h2>Featured Taco</h2>
+                <p>Slim Profile, easy to hold and loaded with cheese.</p>
+                <p>This is the one you have been waiting for</p>
+                <button for="but">Learn More</button>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Instant Grams</h2>
+            <img src="content/11.jpg" alt="">
+            <img src="content/10.jpg" alt="">
+            <img src="content/22.jpg" alt="">
+            <img src="content/99.jpg" alt="">
+            <img src="content/33.jpg" alt="">
+            <img src="content/88.jpg" alt="">
+            <img src="content/44.jpg" alt="">
+            <img src="content/77.jpg" alt="">
+            <img src="content/55.jpg" alt="">
+            <img src="content/66.jpg" alt="">
+        </section>
+
+
+    </div>
+
+    <script>
+        const navButton = document.querySelector('button[aria-expanded]');
+
+        function toggleNav({ target }) {
+            const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+            navButton.setAttribute('aria-expanded', !expanded);
+        }
+
+        navButton.addEventListener('click', toggleNav);
+
+    </script>
+
+</body>
+</html>
